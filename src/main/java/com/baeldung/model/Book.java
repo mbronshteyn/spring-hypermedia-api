@@ -7,8 +7,10 @@ import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonView;
+import lombok.Data;
 
 @Entity
+@Data
 public class Book {
 
     @JsonIgnore

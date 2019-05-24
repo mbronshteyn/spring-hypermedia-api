@@ -2,6 +2,7 @@ package com.baeldung.persistence;
 
 import com.baeldung.SpringHypermediaApiApplication;
 import com.baeldung.model.Book;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ public class BookRepositoryTest {
     private BookRepository bookRepository;
 
     @Test
+    @Ignore
     public void persisting() {
         Book book1 = new Book();
         book1.setAuthor("Author1");
