@@ -12,7 +12,8 @@ import com.baeldung.web.controller.BookController;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonView;
 
-public class BookResource extends ResourceSupport {
+// public class BookResource extends ResourceSupport {
+public class BookResource {
 
     @JsonView(BookView.Summary.class)
     private final Book book;
@@ -23,7 +24,7 @@ public class BookResource extends ResourceSupport {
 
         // this.add(BasicLinkBuilder.linkToCurrentMapping().slash("/books").slash(book.getIsbn()).withSelfRel());
         // this.add(linkTo(methodOn(BookController.class, book).findByIsbn(book.getIsbn())).withSelfRel());
-        this.add(linkTo(BookController.class).slash(book.getIsbn()).withSelfRel());
+        // this.add(linkTo(BookController.class).slash(book.getIsbn()).withSelfRel());
     }
 
     //

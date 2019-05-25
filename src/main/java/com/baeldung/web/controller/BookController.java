@@ -34,7 +34,7 @@ public class BookController {
         final Book book = Checks.checkEntityExists(repo.findByIsbn(isbn), "No book found for isbn = " + isbn);
 
         final BookResource bookResource = new BookResource(book);
-        bookResource.add(linkTo(methodOn(CartController.class).addBookToCart(bookResource)).withRel("add-to-cart"));
+ //       bookResource.add(linkTo(methodOn(CartController.class).addBookToCart(bookResource)).withRel("add-to-cart"));
 
         return bookResource;
     }
