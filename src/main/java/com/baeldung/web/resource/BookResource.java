@@ -4,6 +4,8 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import org.springframework.hateoas.ResourceSupport;
 
 import com.baeldung.model.Book;
@@ -13,6 +15,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonView;
 
 // public class BookResource extends ResourceSupport {
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class BookResource {
 
     @JsonView(BookView.Summary.class)
