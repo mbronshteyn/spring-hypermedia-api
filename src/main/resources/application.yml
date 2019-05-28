@@ -1,0 +1,20 @@
+management:
+    endpoints:
+        enabled-by-default: true
+        web:
+            base-path: /actuator
+            exposure:
+                include: '*'
+    metrics:
+        web:
+            server:
+                auto-time-requests: true
+    server:
+        port: 8082
+server:
+    port: 8081
+spring:
+    jackson:
+        date-format: yyyy-MM-dd HH:mm:ss
+    mvc:
+        dispatch-options-request: true
